@@ -9,7 +9,10 @@ $('#js-shopping-list-form').submit(event => {
 
 const userListItem = $(this).find('#shopping-list-entry').val();
 
-$('.shopping-list').append(
+
+//Crate a new li in shopping list following a similar naming convention
+//to the other li in the div 
+$('.shopping-list').prepend(
     `<li>
       <span class="shopping-item">${userListItem}</span>
       <div class="shopping-item-controls">
@@ -24,8 +27,7 @@ $('.shopping-list').append(
 
 //clear input to add another list item
 
-$('.js-shopping-list-entry').val('');
+$('#shopping-list-entry').val('');
 
-
-    }
-}
+    });
+});
